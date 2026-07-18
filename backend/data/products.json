@@ -1,0 +1,82 @@
+[
+  {
+    "id": "p1",
+    "name": "Gentle Foaming Cleanser",
+    "category": "skin",
+    "for_types": ["oily", "combination", "acne-prone"],
+    "budget": "low",
+    "tags": ["cleanser", "non-comedogenic"]
+  },
+  {
+    "id": "p2",
+    "name": "Ceramide Repair Moisturizer",
+    "category": "skin",
+    "for_types": ["dry", "sensitive", "normal"],
+    "budget": "medium",
+    "tags": ["moisturizer", "barrier-repair"]
+  },
+  {
+    "id": "p3",
+    "name": "Niacinamide 5% Serum",
+    "category": "skin",
+    "for_types": ["oily", "acne-prone", "combination"],
+    "budget": "low",
+    "tags": ["serum", "oil-control", "brightening"]
+  },
+  {
+    "id": "p4",
+    "name": "Mineral SPF 50 Sunscreen",
+    "category": "skin",
+    "for_types": ["all"],
+    "budget": "medium",
+    "tags": ["sunscreen", "daily-essential"]
+  },
+  {
+    "id": "p5",
+    "name": "Salicylic Acid Spot Gel",
+    "category": "skin",
+    "for_types": ["acne-prone", "oily"],
+    "budget": "low",
+    "tags": ["spot-treatment", "exfoliant"]
+  },
+  {
+    "id": "h1",
+    "name": "Sulfate-Free Moisture Shampoo",
+    "category": "hair",
+    "for_types": ["dry", "curly", "colored"],
+    "budget": "low",
+    "tags": ["shampoo", "gentle"]
+  },
+  {
+    "id": "h2",
+    "name": "Deep Conditioning Hair Mask",
+    "category": "hair",
+    "for_types": ["dry", "damaged", "colored", "curly"],
+    "budget": "medium",
+    "tags": ["mask", "weekly-treatment"]
+  },
+  {
+    "id": "h3",
+    "name": "Anti-Dandruff Shampoo (Zinc Pyrithione)",
+    "category": "hair",
+    "for_types": ["oily", "flaky-scalp"],
+    "budget": "low",
+    "tags": ["shampoo", "scalp-care"]
+  },
+  {
+    "id": "h4",
+    "name": "Lightweight Hair Growth Tonic",
+    "category": "hair",
+    "for_types": ["thinning", "oily"],
+    "budget": "medium",
+    "tags": ["tonic", "scalp-care"]
+  },
+  {
+    "id": "h5",
+    "name": "Leave-In Detangling Spray",
+    "category": "hair",
+    "for_types": ["curly", "dry", "damaged"],
+    "budget": "low",
+    "tags": ["styling", "protectant"]
+  }
+]

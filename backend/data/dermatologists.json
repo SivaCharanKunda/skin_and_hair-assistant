@@ -1,0 +1,30 @@
+[
+  {
+    "id": "d1",
+    "name": "Dr. Ananya Rao",
+    "specialty": "Cosmetic & Clinical Dermatology",
+    "city": "Hyderabad",
+    "slots": ["2026-07-18 10:00", "2026-07-18 15:30", "2026-07-19 11:00"]
+  },
+  {
+    "id": "d2",
+    "name": "Dr. Vikram Shah",
+    "specialty": "Trichology (Hair Disorders)",
+    "city": "Bengaluru",
+    "slots": ["2026-07-17 09:30", "2026-07-19 16:00"]
+  },
+  {
+    "id": "d3",
+    "name": "Dr. Priya Menon",
+    "specialty": "General Dermatology",
+    "city": "Kurnool",
+    "slots": ["2026-07-18 12:00", "2026-07-20 10:30"]
+  },
+  {
+    "id": "d4",
+    "name": "Dr. Rohan Desai",
+    "specialty": "Pediatric & Adult Dermatology",
+    "city": "Chennai",
+    "slots": ["2026-07-17 14:00", "2026-07-21 09:00"]
+  }
+]

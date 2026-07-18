@@ -1,0 +1,13 @@
+[
+  {
+    "appointment_id": "b2031255",
+    "patient_name": "Asha",
+    "dermatologist_id": "d3",
+    "dermatologist_name": "Dr. Priya Menon",
+    "specialty": "General Dermatology",
+    "datetime": "2026-07-18 12:00",
+    "reason": "Symptom description mentions: bleeding, changed color",
+    "booked_at": "2026-07-16T08:25:51",
+    "status": "confirmed"
+  }
+]

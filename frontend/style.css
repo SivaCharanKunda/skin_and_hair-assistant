@@ -1,0 +1,302 @@
+/* ============================================================
+   Design tokens
+   Subject: a calm, trustworthy skin & hair intake + assessment tool.
+   Palette avoids the generic cream+terracotta / dark+neon defaults —
+   goes clinical-botanical instead: sage for "healthy/low risk",
+   warm gold for attention, muted red reserved only for high risk.
+   ============================================================ */
+:root {
+  --bg: #eef2ee;
+  --surface: #ffffff;
+  --ink: #1f2a24;
+  --ink-soft: #56635b;
+  --line: #d9e2dc;
+
+  --sage: #3b6b54;
+  --sage-dark: #294a3a;
+  --gold: #c98a2c;
+  --alert: #b23b3b;
+
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(31, 42, 36, 0.06), 0 8px 24px rgba(31, 42, 36, 0.06);
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2.15rem;
+  line-height: 1.15;
+  margin: 0 0 10px;
+  color: var(--sage-dark);
+}
+
+.sub {
+  color: var(--ink-soft);
+  margin: 0 0 36px;
+  max-width: 52ch;
+}
+
+.disclaimer {
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: #f7f9f6;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 26px;
+}
+
+legend {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--sage-dark);
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.field { margin-bottom: 18px; }
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink);
+  background: #fbfcfb;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 13px;
+  transition: border-color 0.15s ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(59, 107, 84, 0.15);
+}
+
+textarea { resize: vertical; min-height: 90px; }
+
+.radio-row { display: flex; gap: 10px; }
+
+.radio-row label.pill {
+  flex: 1;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.radio-row input { display: none; }
+.radio-row input:checked + label.pill,
+.radio-row label.pill.checked {
+  border-color: var(--sage);
+  background: rgba(59, 107, 84, 0.08);
+  color: var(--sage-dark);
+}
+
+.upload-box {
+  border: 1.5px dashed var(--line);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+.upload-box:hover { border-color: var(--sage); }
+.upload-box input { display: none; }
+#file-name { display: block; margin-top: 8px; font-family: var(--font-mono); font-size: 12px; color: var(--sage-dark); }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+button.primary {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  background: var(--sage);
+  border: none;
+  border-radius: 10px;
+  padding: 14px 22px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+button.primary:hover { background: var(--sage-dark); }
+
+/* ---------------- Results page ---------------- */
+
+.risk-strip {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.risk-bar {
+  width: 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.risk-bar.low { background: var(--sage); }
+.risk-bar.moderate { background: var(--gold); }
+.risk-bar.high { background: var(--alert); }
+
+.risk-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+.risk-value {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin: 2px 0 10px;
+}
+.risk-value.low { color: var(--sage); }
+.risk-value.moderate { color: var(--gold); }
+.risk-value.high { color: var(--alert); }
+
+ul.reasons, ul.reminders {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+}
+ul.reasons li, ul.reminders li { margin-bottom: 4px; }
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--sage-dark);
+  margin: 0 0 14px;
+}
+
+.routine-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.routine-col h4 {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+.routine-col ul { margin: 0; padding-left: 18px; }
+.routine-col li { margin-bottom: 6px; }
+
+.caution-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--alert);
+  font-weight: 600;
+}
+
+.product-list { display: grid; gap: 10px; }
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.product .name { font-weight: 600; }
+.product .budget {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+}
+
+.referral-box {
+  border-radius: 10px;
+  padding: 18px;
+}
+.referral-box.high { background: #fbecec; border: 1px solid #e8bcbc; }
+.referral-box.low { background: #eef4f0; border: 1px solid var(--line); }
+.referral-box p { margin: 0 0 14px; }
+
+.appointment {
+  background: #f7f9f6;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.appointment div { margin-bottom: 4px; }
+.appointment .k { color: var(--ink-soft); display: inline-block; width: 130px; }
+
+a.back {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--sage-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+a.back:hover { text-decoration: underline; }
+
+@media (max-width: 560px) {
+  .grid-2, .routine-cols { grid-template-columns: 1fr; }
+}
